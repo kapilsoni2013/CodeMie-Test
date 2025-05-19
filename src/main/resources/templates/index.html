@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Todo App</title>
+</head>
+<body>
+<h1>Todo List</h1>
+<form th:action="@{/addTodo}" th:object="${todo}" method="post">
+    <input type="text" th:field="*{title}" placeholder="Title" required/>
+    <input type="text" th:field="*{description}" placeholder="Description"/>
+    <button type="submit">Add</button>
+</form>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+    <th:block th:each="todo : ${todos}">
+        <tr>
+            <td th:text="${todo.title}">Title</td>
+            <td th:text="${todo.description}">Description</td>
+            <td><a th:href="@{/deleteTodo/{id}(id=${todo.id})}">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
