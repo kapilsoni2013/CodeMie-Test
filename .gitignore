@@ -1,0 +1,9 @@
+.idea
+/target
+/.gradle
+/.mvn
+/.vscode
+/.classpath
+/.project
+/.settings
+/.DS_Store
