@@ -1,6 +1,6 @@
 # CodeMie-Test
 
-Welcome to the CodeMie test repository. This repository contains sample code and tools for various tests and learning purposes.
+Welcome to the CodeMie test repository. This repository contains sample code and tools for various tests and learning purposes. It demonstrates best practices in using Node.js and associated libraries.
 
 ## Getting Started
 
@@ -25,6 +25,29 @@ To get started with the project, follow these steps:
    ```bash
    npm start
    ```
+
+## Project Structure
+
+The project structure is as follows:
+
+```
+CodeMie-Test/
+├── node_modules/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   ├── services/
+│   ├── utils/
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── package.json
+├── .gitignore
+├── README.md
+└── ...
+```
 
 ## Branch Management
 
