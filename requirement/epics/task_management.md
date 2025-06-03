@@ -1,27 +1,23 @@
 ## EPIC: Task Management
 
 **Epic Description:** 
-CRUD operations for tasks, including categorization and prioritization.
+Manage tasks within the Todo application
 
 **Business Objective:** 
-Allow users to efficiently manage their tasks.
+Allow users to create, update, delete, and view tasks
 
 **Success Metrics:** 
 - Number of tasks created
-- Task update success rate
-- Task deletion success rate
+- Number of tasks completed
 
 **User Stories Included:**
-- Create Task
-- Update Task
-- Delete Task
-- View Task
-- Categorize Task
-- Prioritize Task
+- USER STORY: US-003 Create Task
+- USER STORY: US-004 Update Task
+- USER STORY: US-005 Delete Task
+- USER STORY: US-006 View Task
 
 **Dependencies:** 
-- User Management module
-- Notification module
+- User Management Epic
 
 **Timeline:** 
-3 sprints
+Estimated duration: 2 sprints
