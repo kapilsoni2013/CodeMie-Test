@@ -1,23 +1,21 @@
 ## USER STORY: US-003 Create Task
 
-**As a** registered user
+**As a** logged-in user
 **I want** to create a new task
-**So that** I can keep track of my to-dos
+**So that** I can manage my tasks
 
 **Acceptance Criteria:**
-1. The user must be logged in to create a task
-2. The task must have a title and description
-3. The task must be saved in the database
+1. User can enter task details (title, description, due date)
+2. Task is saved in the database
+3. User can see the task in the task list
 
 **Technical Notes:**
-- Use Spring Boot 3 for backend
-- Use JPA for database interactions
-- Use Thymeleaf for frontend
+- Use Spring Data JPA for database operations
+- Validate task details
 
 **Subtasks:**
-- Create Task Form
-- Implement Task Creation API
-- Save Task in Database
-- Display Confirmation Message
+- Create task form
+- Implement task saving logic
+- Display task in task list
 
 **Story Points:** 5
