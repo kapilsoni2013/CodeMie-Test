@@ -1,0 +1,2 @@
+## Executive Summary
+The restaurant reservation application aims to streamline the process of booking tables at restaurants. Users can search for restaurants, view available time slots, and make reservations. Restaurants can manage their bookings and availability through the application.
