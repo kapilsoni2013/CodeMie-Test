@@ -42,7 +42,7 @@ class TaskControllerTest {
         request.setDescription("Test Description");
         request.setCompleted(false);
 
-        TaskResponse response = new TaskResponse();
+        TaskResponse response = new TaskResponse(null);
         response.setId(1L);
         response.setTitle("Test Task");
         response.setDescription("Test Description");
@@ -52,7 +52,7 @@ class TaskControllerTest {
 
         mockMvc.perform(post("/api/v1/tasks")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{"title":"Test Task","description":"Test Description","completed":false}"))
+                .content("{\"title\":\"Test Task\",\"description\":\"Test Description\",\"completed\":false}"))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.id").value(1L))

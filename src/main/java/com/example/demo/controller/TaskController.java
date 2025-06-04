@@ -13,7 +13,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/tasks")
-@Validated
 public class TaskController {
 
     @Autowired
@@ -31,13 +30,13 @@ public class TaskController {
 
     @PostMapping
     @PreAuthorize("hasRole('USER')")
-    public ResponseEntity<TaskResponse> createTask(@Valid @RequestBody TaskRequest request) {
+    public ResponseEntity<TaskResponse> createTask( @RequestBody TaskRequest request) {
         return ResponseEntity.ok(taskService.createTask(request));
     }
 
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('USER')")
-    public ResponseEntity<TaskResponse> updateTask(@PathVariable Long id, @Valid @RequestBody TaskRequest request) {
+    public ResponseEntity<TaskResponse> updateTask(@PathVariable Long id,  @RequestBody TaskRequest request) {
         return ResponseEntity.ok(taskService.updateTask(id, request));
     }
 
