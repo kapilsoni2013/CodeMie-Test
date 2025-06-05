@@ -28,17 +28,16 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
-		<sonar.host.url>https://66be-150-129-248-173.ngrok-free.app</sonar.host.url>
-		<sonar.login>sqp_7c4ded83afe2a0cc5f8104ffb5158b0a8c70cb68</sonar.login>
+		<sonar.host.url>http://kapilsony.ddns.net:9000</sonar.host.url>
+		<sonar.login>sqp_c9ee139a91bf9839817c904402fe24b7dd1efb1b</sonar.login>
 		<sonar.projectKey>CodeMie</sonar.projectKey>
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.issuesReport.html.enable>true</sonar.issuesReport.html.enable>
 		<sonar.issuesReport.html.location>target/sonar/report</sonar.issuesReport.html.location>
 		<sonar.language>java</sonar.language>
 
 		<sonar.coverage.jacoco.xmlReportPaths>
-			target/site/jacoco-aggregate/jacoco.xml
+			target/site/jacoco/jacoco.xml
 		</sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
 	<dependencies>
@@ -101,27 +100,12 @@
 							</formats>
 						</configuration>
 					</execution>
-					<execution>
-						<id>report-aggregate</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>report-aggregate</goal>
-						</goals>
-					</execution>
 				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.sonarsource.scanner.maven</groupId>
 				<artifactId>sonar-maven-plugin</artifactId>
 				<version>5.1.0.4751</version>
-			</plugin>
-			<plugin>
-				<groupId>nl.demon.shadowland.maven.plugins</groupId>
-				<artifactId>sonarqube-maven-report</artifactId>
-				<version>0.2.2</version>
-				<configuration>
-					<sonarHostURL>${sonar.host.url}/</sonarHostURL>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
