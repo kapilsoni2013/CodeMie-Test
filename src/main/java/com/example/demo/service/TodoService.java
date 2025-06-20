@@ -13,10 +13,15 @@ public class TodoService {
     private TodoRepository todoRepository;
 
     public Todo createTodo(TodoDTO todoDTO) {
+        Todo todo = mapDtoToEntity(todoDTO);
+        return todoRepository.save(todo);
+    }
+
+    private Todo mapDtoToEntity(TodoDTO todoDTO) {
         Todo todo = new Todo();
         todo.setTitle(todoDTO.getTitle());
         todo.setDescription(todoDTO.getDescription());
         todo.setCompleted(todoDTO.getCompleted());
-        return todoRepository.save(todo);
+        return todo;
     }
 }
