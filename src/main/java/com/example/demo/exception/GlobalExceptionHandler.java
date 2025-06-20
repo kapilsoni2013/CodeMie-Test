@@ -30,4 +30,11 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleInvalidInputException(InvalidInputException ex) {
         return ResponseEntity.badRequest().body(ex.getMessage());
     }
+
+    @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public ResponseEntity<String> handleGenericException(Exception ex) {
+        String issueDescription = "EPMCDMETST-7048: Default issue description";
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(issueDescription);
+    }
 }
