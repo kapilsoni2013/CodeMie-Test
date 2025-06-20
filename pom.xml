@@ -29,7 +29,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<sonar.host.url>http://kapilsony.ddns.net:9000</sonar.host.url>
-		<sonar.login>sqp_c9ee139a91bf9839817c904402fe24b7dd1efb1b</sonar.login>
+		<sonar.login>sqp_f205a1fd8b9a1bc5d9882c673a342da050b478fe</sonar.login>
 		<sonar.projectKey>CodeMie</sonar.projectKey>
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 		<sonar.issuesReport.html.enable>true</sonar.issuesReport.html.enable>
