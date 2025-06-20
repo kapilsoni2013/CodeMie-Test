@@ -5,6 +5,7 @@ import com.example.demo.entity.Todo;
 import com.example.demo.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class TodoService {
@@ -12,6 +13,7 @@ public class TodoService {
     @Autowired
     private TodoRepository todoRepository;
 
+    @Transactional
     public Todo createTodo(TodoDTO todoDTO) {
         Todo todo = mapDtoToEntity(todoDTO);
         return todoRepository.save(todo);
